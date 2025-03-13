@@ -1,8 +1,12 @@
-import math
-
-a = float(input("Nhập cạnh a: "))
-b = float(input("Nhập cạnh b: "))
-c = float(input("Nhập cạnh c: "))
-C = float(input("Nhập góc C (radian): "))
-S = 0.5 * a * b * math.sin(C)
-print("Diện tích tam giác là:", S)
+num = int(input("Nhập một số: "))
+level = int(input("Nhập bậc: "))
+sum = 0
+temp = num
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** level
+    temp //= 10
+if num == sum:
+    print(num, "là số Armstrong bậc", level)
+else:
+    print(num, "không là số Armstrong")
